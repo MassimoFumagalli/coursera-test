@@ -1,0 +1,41 @@
+
+section {
+	background-color: #999999;
+	/*ROSA G: 98 R: D5    B: 98 */
+
+	/*ROSSO G:45  R:   C1  B: 43 */
+	/*GIALLO G:D1  R: E5    B: 98 */
+}
+
+div {
+	border: 1px;
+	border-color: black;
+	border-style: solid;;
+}
+
+.header {
+	text-align: center;
+}
+
+#section1 + div {
+	background-color: #98D598;
+}
+
+#section2 > div:first {
+	background-color: #45C143;
+}
+
+#section3 > div:first {
+	background-color: #D1E598;
+}
+
+
+/* Tablet style */
+@media (min-width:  768px and max-width: 991px) {
+
+}
+
+/* Desktop style */
+@media (min-width: 992px) {
+
+}
