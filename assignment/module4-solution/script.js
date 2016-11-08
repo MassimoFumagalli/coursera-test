@@ -42,8 +42,9 @@ WARNING!!! WARNING!!!
   // using the 'speak' method or either helloSpeaker's or byeSpeaker's
   // 'speak' method.
   // See Lecture 50, part 1
-  for (idx in names) {
-
+  for (var name in names) {
+    var curName = names[name];
+    
     // STEP 11:
     // Retrieve the first letter of the current name in the loop.
     // Use the string object's 'charAt' function. Since we are looking for
@@ -51,7 +52,7 @@ WARNING!!! WARNING!!!
     // string object's 'toLowerCase' method on the result so we can compare
     // to lower case character 'j' afterwards.
     // Look up these methods on Mozilla Developer Network web site if needed.
-    var firstLetter = names[idx].charAt(0).toLowerCase();
+    var firstLetter = curName.charAt(0).toLowerCase();
 
     // STEP 12:
     // Compare the 'firstLetter' retrieved in STEP 11 to lower case
@@ -59,9 +60,9 @@ WARNING!!! WARNING!!!
     // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
     // name in the loop.
     if (firstLetter === "j") {
-      byeSpeaker.speak(names[idx]);
+      byeSpeaker.speak(curName);
     } else {
-      helloSpeaker.speak(names[idx]);
+      helloSpeaker.speak(curName);
     }
   }
 })();
